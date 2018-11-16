@@ -12,17 +12,19 @@ if ($conn->connect_error) {
 } 
 
 $sql = "SELECT * FROM usuarios where login = '$login'";
-//$sql = "SELECT * FROM usuarios where login = 'luiz'";
+
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 
     while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["login"]."<br>";
+        echo "id: " . $row["id"]. " - Nome: " . $row["login"]."<br>";
     }
+
 } else {
-    echo "0 results";
+    
 }
+
 $conn->close();
 ?>
 
