@@ -11,7 +11,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT * FROM usuarios where login = '$login'";
+//$sql = "SELECT * FROM usuarios where login = '$login'";
+$sql = "SELECT * FROM usuarios where login = 'luiz'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
